@@ -1,43 +1,137 @@
 <!DOCTYPE html>
-<html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Emmeloord</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header>
-            <h2 class="kop">Ontdek Emmeloord</h2>
-        </header>
-        <main class="doen">
-        <h3>Wat is er in Emmeloord te doen?</h3>
-        <p><a href="https://www.theater-voorhuys.nl/?gclid=EAIaIQobChMIg8T_h7_l_wIVDOJ3Ch35Dw_MEAAYAiAAEgJ0efD_BwE"><img class="theater" src="img/downloaden.png" alt="theater 't Voorhuys"></a>
-        <h3 class="tussen"> 'T Voorhuys</h3>
-        <p>Bij het Voorhuys kunt u niet alleen genieten van het theater (die onlangs gerenoveerd is)<br> maar ook
-    genieten van het lekkere eten in het naastgelegen restaurant. Klik op de afbeelding<br> om meer geïnspireerd te raken
-en natuurlijk een indruk te krijgen van 't Voorhuys!</p>
-<p><a href="https://www.orchideeenhoeve.nl/"><img class="theater" src="img/De-Orchideeën-Hoeve.jpg" alt="De Orchideeënhoeve"></a>
-    <h3 class="tussen">De Orchideëenhoeve</h3>
-<p>Wat zeker genoemd mag worden is de Orchideëenhoeve in Luttelgeest, <br>misschien niet in Emmeloord maar het benoemen en 
-bezichigen waard!<br> Klik snel op de foto om tickets te kopen op de site van de Orchideëenhoeve!</p>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Emmeloord.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #B38B6D; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        h1, h2 {
+            font-family: 'Dancing Script', cursive;
+        }
+        .rounded {
+            border-radius: 15px;
+        }
+        header {
+            background: url('https://assets.plaece.nl/odp-flevoland/image/35df423a-d0f3-4a2b-a2a4-6293fc76930e_1764117366.jpeg') no-repeat center center opacity-25;
+            background-size: cover;
+            color: white;
+        }
+        .card-body {
+            background-color: #B38B6D;
+        }
+        .float-right {
+            float: right-top;
+            margin-left: 20px; 
+}
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <script>
+        const hamburger = document.querySelector('.hamburger');
 
-<p><a href="https://www.emmelocked.nl/"><img class="theater" alt="Emmelocked" src="img/downloaden2.jpg"></a>
-    <h3 class="tussen">EmmeLocked</h3>
-    <p>De escape room is sinds kort in Emmeloord en heb ik zelf dus nooit van binnen gezien
-maar laat je verrassen!</p></main>
-<aside class="wist">
-    <h3>Wist je dat?</h3><br>
-    <p>~ Er een Poldertoren staat in Emmeloord?</p><br>
-    <p>~ Dat de Noordoostpolder afgekort wordt door inwoners naar NOP?</p><br>
-    <p>~ Dat 'U moet de groente van HAK hebben' met Martine Bijl is opgenomen in Emmeloord?</p><br>
-    <p>~ Schokland op de lijst van UNESCO staat?</p><br>
-    <p>~ In Japan een replica van de Poldertoren staat?</p>
-    </aside>
-    <footer>
-        <h3 class="voet">Ontdek Emmeloord</h3>
-        <p class="p3"> Ontdek ook de huizenmarkt en wat er nog meer te doen is op onderstaande iconen</p>
-        <a href="https://www.funda.nl/"><img class="icon" src="img/funda-icon-primary.png" alt="funda"></a>
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+<body>
+    <header class="text-white text-center py-4 mb-4 rounded">
+        <h1>Emmeloord</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Emmeloord</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Bezienswaardigheden</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card-body">
+                        <h2 class="card-title">Pantropica</h2>
+                        <p class="card-text">De Orchideeën Hoeve is een junglepark met tropische dieren in Luttelgeest in Flevoland. Het junglepark richt zich op de combinatie van flora en fauna, dieren leven vrij in het park. In 2014 kreeg het bedrijf een dierentuinvergunning.</p>
+                        <img src="https://www.fijnuit.nl/images/bedrijven/814-vlindertuin-orchideeen-hoeve/pantropica-nieuwe-logo.jpg" alt="Afbeelding 1" class="img-fluid float-right" style="width: 200px; height: auto;">
+                        <a href="https://pantropica.nl/" class="btn btn-primary">Meer informatie</a>
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-title">Theater 't Voorhuys</h2>
+                        <p class="card-text">Theater 't Voorhuys in Emmeloord biedt een gevarieerd aanbod aan optredens: van cabaret tot klassieke muziek, van toneelstukken tot theaterconcerten.</p>
+                        <img src="https://gastvrijemmeloord.nl/wp-content/uploads/2019/07/Theater-t-Voorhuys-voorkant.jpg" alt="Afbeelding 2" class="img-fluid float-right" style="width: 200px; height: auto;">
+                        <a href="https://www.theater-voorhuys.nl" class="btn btn-primary">Meer informatie</a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://www.twitter.com" target="_blank"><i class="bx bxl-twitter"></i></a>
+                    </div>
+                    <p>&copy; 2024 Emmeloord. Alle rechten voorbehouden.</p>
+                </div>
+            </div>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
