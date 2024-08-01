@@ -1,85 +1,65 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+body {
+    font-family: 'AR One Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
-header {
-    width: 100%;
-    height: 250px;
-    display:inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+.header {
+    padding: 2%;
+    border: 1px 1px 1px;
     background-image: url("img/Emmeloord.jpg");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position-y: center;
-    border-end-end-radius: 15px;
-}
-p {
-    padding-top: 50px;
-    padding-right: 15px;
-    padding-bottom:  20px;
-}
-h3 {
-    padding-top: 15px;
-}
-.kop {
-    margin-top: 20px;
-    width:500px;
-    height:130px;
-    font-size: 25px;
-    font-style: italic;
-    color:antiquewhite;
+    text-size-adjust: 25px;
     text-align: center;
+    width: 96%;
+    color:bisque;
 }
-main {
-    flex: 1 0 75%;
-    background-color: lightpink;
-    font-size: medium;
-    color:rgb(85, 61, 30);
-    float: right;
-    text-align: center;
+.sightseeing {
+    position:relative;
+    float:right;
+    width: 60.5%;
+    height: 600px;
+    background-color: blanchedalmond;
+    padding: 50px;
+    margin-top: 1px;
+}
+img {
+    float:right;
+    height: 100px;
+    width: 150px;
 }
 aside {
-    flex: 1 0 25%;
-    background-color: lightcoral;
-    font-size: medium;
-    color:antiquewhite;
-    text-align: center;
-}
-.theater {
-    width: 250px;
-    height:155px;
-    padding-bottom: 25px;
-    display: inline-block;
-    float: right;
-}
-.tussen {
-    padding-bottom: 5px;
-    text-align: center;
+    margin-top: 1px;
+    float: left;
+    height: 600px;
+    width: 25%;
+    background-color: bisque;
+    padding: 50px;
 }
 footer {
-    padding-top: 5px;
-    height: 35%;
-    background-color: lightblue;
-}
-.voet {
-    color:black;
-    text-align: center;
-    font-size: large;
-    padding-bottom: 10px;
-}
-.p3 {
-    padding-top: 3px;
-    text-align: center;
-}
-.icon {
-    width: 25px;
-    height: 25px;
-    padding: 3px 3px 3px;
+    background-color: bisque;
     display: inline-block;
-    margin:auto;
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    margin-bottom: 10px;
 }
-@media (min-width:600px) {
-    body {
-        color: blueviolet; 
+
+@media screen and (max-width: 600px) { 
+    [class*="sightseeing"] {
+        float:none;
+        width: 100%;
+        background-color: blanchedalmond;
+        border: 1%;
+        padding: 5px;
     }
-}
+    @media  screen and (max-width: 600px) {
+        [class*="aside"] {
+            float:none;
+            width: 100%;
+            background-color: blanchedalmond;
+            border: 1%;
+            padding: 5px;
+                }
+        }
+    }
